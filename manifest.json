@@ -1,10 +1,21 @@
 {
-    "name": "Word Replacer",
-    "version": "1.0",
     "manifest_version": 3,
-    "description": "Extension to exchange words on webpage",
+    "name": "Text Replacement Extension",
+    "description": "Google Chrome extension that replaces text on a webpage",
+    "version": "1.0",
     "action": {
         "default_icon": "icon.png",
         "default_popup": "index.html"
-    }
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "*://*/*"
+            ],
+            "js": [
+                "content.js"
+            ],
+            "run_at": "document_end"
+        }
+    ]
 }
