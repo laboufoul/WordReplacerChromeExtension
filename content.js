@@ -1,21 +1,14 @@
-var elements = document.getElementsByTagName('*');
+// Get all the elements that you care about into an array
+//let elements = Array.prototype.slice.call(document.querySelectorAll("p, h1, header"));
+const elements = document.querySelectorAll('*');
+let arr = Array.from(elements);
 
-for (var i = 0; i < elements.length; i++) {
-    var element = elements[i];
+function swap(){
+  arr.forEach(function(el){
+    // Do the replace on the element
+    el.textContent = el.textContent.replace('This', 'coding');
+  });
+};
 
-    for (var j = 0; j < element.childNodes.length; j++) {
-        var node = element.childNodes[j];
-
-        //if node is a text node, will return 3
-        if (node.nodeType === 3) {
-            var text = node.nodeValue;
-            var replacedText = text.replace('This', 'Coding');
-
-            if (replacedText !== text) {
-                element.replaceChild(document.createTextNode(replacedText), node);
-            }
-        }
-    }
-}
 
 
