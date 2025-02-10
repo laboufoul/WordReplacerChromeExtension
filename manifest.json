@@ -1,15 +1,18 @@
 {
-    "manifest_version": 3,
     "name": "Text Replacement Extension",
-    "description": "Google Chrome extension that replaces text on a webpage",
     "version": "1.0",
+    "manifest_version": 3,
+    "description": "Extension to exchange words on webpage",
     "action": {
-        "default_icon": "icon.png",
-        "default_popup": "index.html"
-    },
-    "content_scripts": [
-            "js": [
-                "content.js"
-            ]
+        "default_icon": "icon.png"
+    }, 
+    "content-scripts":
+    [
+        {
+            "matches": ["*://*/*"],
+            "all-frames": true,
+            "js": ["content.js"],
+            "run_at": "document_end"
+        }
     ]
 }
