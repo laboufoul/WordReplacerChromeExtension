@@ -2,10 +2,13 @@
     "name": "Text Replacement Extension",
     "version": "1.0",
     "manifest_version": 3,
-    "description": "Extension to exchange words on webpage",
-    "action": {
-        "default_icon": "icon.png"
-    }, 
+    "description": "Extension to exchange Zionist affiliate links on a webpage to link to sites that support the Palestinian cause",
+    "icons": {
+        "16": "icon16.png",
+        "48": "icon48.png",
+        "128": "icon128.png"
+    },
+    "permissions": ["*://*"],
     "content-scripts":
     [
         {
