@@ -15,9 +15,7 @@
     [
         {
             "matches": ["*://*/*"],
-            "all-frames": true,
             "js": ["content.js"],
-            "run_at": "document_end"
         }
     ]
 }
