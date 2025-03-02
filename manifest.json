@@ -14,7 +14,7 @@
     "content-scripts":
     [
         {
-            "matches": ["*://*/*"],
+            "matches": ["https://*.example.com/*"],
             "js": ["content.js"],
         }
     ]
