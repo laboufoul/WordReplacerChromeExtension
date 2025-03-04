@@ -1,4 +1,4 @@
-const text = document.getElementsByTagName("a");
+const text = document.getElementsByTagName("*");
 
 for (let i=0; i < text.length; i++){
   if (text[i].innerHTML.includes('amazon')){
