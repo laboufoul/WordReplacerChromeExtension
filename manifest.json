@@ -9,13 +9,16 @@
         "128": "icon128.png"
     },
     "permissions": [
-        "activeTab"
+        "activeTab", "scripting"
     ],
-    "content-scripts":
-    [
+    "content_scripts": [
         {
-            "matches": ["https://*.example.com/*"],
-            "js": ["content.js"]
+          "js": [
+            "content.js"
+          ],
+          "matches": [
+            "*://*/*"
+          ]
         }
-    ]
+      ]
 }
