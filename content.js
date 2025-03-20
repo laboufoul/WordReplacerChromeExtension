@@ -1,10 +1,12 @@
-const text = document.querySelectorAll('*');
-
-for (let i=0; i < text.length; i++){
-  if (text[i].innerHTML.includes('dog')){
-    text[i].innerHTML = text[i].innerHTML.replace('dog', 'CODE' )
-  }
-}
+function replaceTextInNode(node) {
+   if (node.nodeType === 3) { // Text node
+     node.nodeValue = node.nodeValue.replace(/dog/gi, 'CODE');
+   } else {
+     node.childNodes.forEach(replaceTextInNode);
+   }
+ }
+ 
+replaceTextInNode(document.body);
 
 
 
